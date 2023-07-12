@@ -12,7 +12,7 @@ jobs:
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-          - name: Upload to blob storage
+    - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
@@ -21,7 +21,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "bmeinert" --name "https://bmeinert.azureedge.net" --resource-group "CloudResumeRG" --no-wait
+           az cdn endpoint purge --content-paths  "/*" --profile-name "bmeinert" --name "bmeinert" --resource-group "CloudResumeRG" --no-wait
 # Azure logout
     - name: logout
       run: |
