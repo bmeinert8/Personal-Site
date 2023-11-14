@@ -1,4 +1,5 @@
 name: Blob storage website CI
+#deploys when push is made
 
 on:
     push:
